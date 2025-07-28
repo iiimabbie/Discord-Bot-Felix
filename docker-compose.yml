@@ -1,13 +1,12 @@
 services:
   dcbot:
     container_name: dcbot
-    image: java21  # 直接用預先 build 好的映像檔
+    image: maven:3.9-eclipse-temurin-21  # 直接用預先 build 好的映像檔
     environment:
       # - DISCORD_TOKEN=${DISCORD_TOKEN}
       # - DISCORD_GUILD_ID=${DISCORD_GUILD_ID}
       # - GEMINI_API_KEY=${GEMINI_API_KEY}
       # - BOT_OWNER_ID=${BOT_OWNER_ID}
-      - JAVA_OPTS=-Duser.timezone=Asia/Taipei
       - TZ=Asia/Taipei  # 設定時區
       - SPRING_PROFILES_ACTIVE=docker
     volumes:
