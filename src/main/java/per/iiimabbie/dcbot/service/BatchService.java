@@ -26,7 +26,7 @@ public class BatchService {
   /**
    * 每天12:00執行此方法
    */
-  @Scheduled(cron = "0 0 12 * * ?")
+  @Scheduled(cron = "0 5 0 * * ?")
   public void sendDailyMessage() {
     try {
       // 從 DiscordService 獲取最新的 JDA 實例
